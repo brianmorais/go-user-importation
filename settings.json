@@ -1,0 +1,24 @@
+{
+    "databases": {
+        "writeDatabase": {
+            "databaseName": "WriteDatabase",
+            "port": 1433,
+            "server": "localhost",
+            "password": "password",
+            "user": "sa"
+        },
+        "readDatabase": {
+            "databaseName": "ReadDatabase",
+            "port": 1433,
+            "server": "localhost",
+            "password": "password",
+            "user": "sa"
+        }
+    },
+    "goRoutines": {
+        "goRoutinesCount": 150,
+        "useGoRoutines": false
+    },
+    "modifiedUser": "admin",
+    "emailDomain": "@dominio.com"
+}
