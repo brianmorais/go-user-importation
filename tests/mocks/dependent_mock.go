@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"time"
 
-	"github.com/brianmorais/go-user-importation/domain/enums/kinshipType"
+	"github.com/brianmorais/go-user-importation/domain/enums/kinship_type"
 	dependentModel "github.com/brianmorais/go-user-importation/domain/models/dependent"
 )
 
@@ -21,7 +21,7 @@ func GetDependentsMock() dependentModel.Dependents {
 			ModifiedDate: sql.NullTime{Time: time.Date(2021, 10, 1, 12, 0, 0, 0, time.UTC)},
 			ModifiedUser: sql.NullString{String: "Admin"},
 			EmployeeId:   sql.NullInt64{Int64: 1},
-			Kinship:      sql.NullInt32{Int32: kinshipType.Parent},
+			Kinship:      sql.NullInt32{Int32: kinship_type.Parent},
 			Cpf:          sql.NullString{String: "123456789"},
 		},
 		dependentModel.Dependent{
@@ -35,7 +35,7 @@ func GetDependentsMock() dependentModel.Dependents {
 			ModifiedDate: sql.NullTime{Time: time.Date(2021, 10, 1, 12, 0, 0, 0, time.UTC)},
 			ModifiedUser: sql.NullString{String: "Admin"},
 			EmployeeId:   sql.NullInt64{Int64: 2},
-			Kinship:      sql.NullInt32{Int32: kinshipType.Parent},
+			Kinship:      sql.NullInt32{Int32: kinship_type.Parent},
 			Cpf:          sql.NullString{String: "987456321"},
 		},
 		dependentModel.Dependent{
@@ -49,7 +49,7 @@ func GetDependentsMock() dependentModel.Dependents {
 			ModifiedDate: sql.NullTime{Time: time.Date(2021, 10, 1, 12, 0, 0, 0, time.UTC)},
 			ModifiedUser: sql.NullString{String: "Admin"},
 			EmployeeId:   sql.NullInt64{Int64: 3},
-			Kinship:      sql.NullInt32{Int32: kinshipType.Spouse},
+			Kinship:      sql.NullInt32{Int32: kinship_type.Spouse},
 			Cpf:          sql.NullString{String: "123987456"},
 		},
 	}
@@ -108,7 +108,7 @@ func GetDependent() dependentModel.Dependent {
 		ModifiedDate: sql.NullTime{Time: time.Date(2021, 10, 1, 12, 0, 0, 0, time.UTC)},
 		ModifiedUser: sql.NullString{String: "Admin"},
 		EmployeeId:   sql.NullInt64{Int64: 1},
-		Kinship:      sql.NullInt32{Int32: kinshipType.Parent},
+		Kinship:      sql.NullInt32{Int32: kinship_type.Parent},
 		Cpf:          sql.NullString{String: "123456789"},
 	}
 }

@@ -1,10 +1,10 @@
-package userModel
+package user
 
 import (
 	"database/sql"
 	"time"
 
-	"github.com/brianmorais/go-user-importation/domain/enums/userType"
+	"github.com/brianmorais/go-user-importation/domain/enums/user_type"
 )
 
 type User struct {
@@ -26,7 +26,7 @@ type Users []User
 
 func (users Users) FindDatabaseUser() User {
 	for i := range users {
-		if users[i].UserTypeId.Int32 == userType.Database {
+		if users[i].UserTypeId.Int32 == user_type.Database {
 			return users[i]
 		}
 	}
@@ -36,7 +36,7 @@ func (users Users) FindDatabaseUser() User {
 
 func (users Users) FindActiveDirectoryUser() User {
 	for i := range users {
-		if users[i].UserTypeId.Int32 == userType.ActiveDirectory {
+		if users[i].UserTypeId.Int32 == user_type.ActiveDirectory {
 			return users[i]
 		}
 	}

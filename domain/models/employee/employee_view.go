@@ -1,4 +1,4 @@
-package employeeModel
+package employee
 
 import (
 	"database/sql"

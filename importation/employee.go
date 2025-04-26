@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/brianmorais/go-user-importation/domain/enums/userAccessType"
-	"github.com/brianmorais/go-user-importation/domain/enums/userType"
+	"github.com/brianmorais/go-user-importation/domain/enums/user_access_type"
+	"github.com/brianmorais/go-user-importation/domain/enums/user_type"
 	benefitModel "github.com/brianmorais/go-user-importation/domain/models/benefit"
 	employeeModel "github.com/brianmorais/go-user-importation/domain/models/employee"
 	userModel "github.com/brianmorais/go-user-importation/domain/models/user"
@@ -387,7 +387,7 @@ func updateExceptionUserPerExceptionDate(employee *employeeModel.Employee) {
 			databaseUser.SetLocked(false)
 			databaseUser.SetModifiedDate(time.Now())
 			databaseUser.SetModifiedUser(settings.ModifiedUser)
-			databaseUser.SetAccessTypeId(userAccessType.Employee)
+			databaseUser.SetAccessTypeId(user_access_type.Employee)
 
 			res, err := userRepository.UpdateUser(databaseUser)
 
@@ -502,7 +502,7 @@ func matchRole(employee employeeModel.EmployeeView) (int32, error) {
 }
 
 func isUserDatabaseType(employee employeeModel.Employee) (bool, error) {
-	users, err := userRepository.GetUsersByTypeAndEmployeeId(employee.GetEmployeeId(), userType.Database)
+	users, err := userRepository.GetUsersByTypeAndEmployeeId(employee.GetEmployeeId(), user_type.Database)
 
 	if err != nil {
 		return false, err
@@ -536,8 +536,8 @@ func createNewUser(employee employeeModel.Employee, user string) {
 		userData.SetPasswordModifiedDate(now)
 		userData.SetPasswordReset(false)
 		userData.SetUserId(strings.ToLower(user))
-		userData.SetUserTypeId(userType.ActiveDirectory)
-		userData.SetAccessTypeId(userAccessType.Employee)
+		userData.SetUserTypeId(user_type.ActiveDirectory)
+		userData.SetAccessTypeId(user_access_type.Employee)
 		userData.SetPassword("")
 
 		res, err := userRepository.CreateUser(userData)

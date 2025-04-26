@@ -1,4 +1,4 @@
-package dependentModel
+package dependent
 
 import (
 	"database/sql"
@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/brianmorais/go-user-importation/domain/enums/kinshipType"
+	"github.com/brianmorais/go-user-importation/domain/enums/kinship_type"
 	"github.com/brianmorais/go-user-importation/domain/utils"
 )
 
@@ -28,13 +28,13 @@ type DependentsView []DependentView
 func (dependent *DependentView) GetViewDataKindship() int32 {
 	switch dependent.CdiLigacaoPessoa.Int32 {
 	case 2, 1, 8:
-		return kinshipType.Child
+		return kinship_type.Child
 	case 3, 4:
-		return kinshipType.Spouse
+		return kinship_type.Spouse
 	case 5, 21:
-		return kinshipType.Parent
+		return kinship_type.Parent
 	default:
-		return kinshipType.Other
+		return kinship_type.Other
 	}
 }
 

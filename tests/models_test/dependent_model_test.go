@@ -1,10 +1,10 @@
-package modelsTest
+package models_test
 
 import (
 	"database/sql"
 	"testing"
 
-	"github.com/brianmorais/go-user-importation/domain/enums/kinshipType"
+	"github.com/brianmorais/go-user-importation/domain/enums/kinship_type"
 	dependentModel "github.com/brianmorais/go-user-importation/domain/models/dependent"
 	"github.com/brianmorais/go-user-importation/tests/mocks"
 	"github.com/stretchr/testify/assert"
@@ -31,7 +31,7 @@ func TestShouldNotEquals(t *testing.T) {
 
 func TestMustGetViewDataKindship(t *testing.T) {
 	dependent := mocks.GetDependentView()
-	expectedKinship := kinshipType.Child
+	expectedKinship := kinship_type.Child
 
 	res := dependent.GetViewDataKindship()
 
@@ -40,7 +40,7 @@ func TestMustGetViewDataKindship(t *testing.T) {
 
 func TestShouldNotGetViewDataKindship(t *testing.T) {
 	dependent := mocks.GetDependentView()
-	expectedKinship := kinshipType.Spouse
+	expectedKinship := kinship_type.Spouse
 
 	res := dependent.GetViewDataKindship()
 

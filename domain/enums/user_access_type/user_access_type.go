@@ -1,4 +1,4 @@
-package userAccessType
+package user_access_type
 
 const (
 	Employee  int32 = 1

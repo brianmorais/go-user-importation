@@ -1,4 +1,4 @@
-package dependentModel
+package dependent
 
 import (
 	"database/sql"

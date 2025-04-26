@@ -1,4 +1,4 @@
-package benefitModel
+package benefit
 
 import (
 	"database/sql"

@@ -1,4 +1,4 @@
-package kinshipType
+package kinship_type
 
 const (
 	// Pai/Mãe
