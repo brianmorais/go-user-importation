@@ -22,7 +22,7 @@ func TestMustGetBenefitsByRoleId(t *testing.T) {
 
 	res := benefits.GetBenefitsByRoleId(roleId)
 
-	assert.GreaterOrEqualf(t, len(res), 0, "Array de benefícios vazio")
+	assert.Greater(t, len(res), 0, "Array de benefícios vazio")
 }
 
 func TestMustSerializeBenefit(t *testing.T) {
