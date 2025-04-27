@@ -4,6 +4,7 @@ import (
 	"strings"
 	"unicode"
 
+	"golang.org/x/text/runes"
 	"golang.org/x/text/transform"
 	"golang.org/x/text/unicode/norm"
 )
@@ -30,7 +31,7 @@ func removeSpaces(str string) string {
 
 func CleanString(str string) string {
 	str = removeSpaces(strings.ToUpper(strings.TrimSpace(str)))
-	t := transform.Chain(norm.NFD, transform.RemoveFunc(isMn), norm.NFC)
+	t := transform.Chain(norm.NFD, runes.Remove(runes.Predicate(isMn)), norm.NFC)
 	result, _, _ := transform.String(t, str)
 	return result
 }
