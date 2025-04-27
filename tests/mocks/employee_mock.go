@@ -203,7 +203,7 @@ func GetEmployeeRoles() employeeModel.EmployeeRoles {
 	return employeeModel.EmployeeRoles{
 		employeeModel.EmployeeRole{
 			RoleId:    sql.NullInt64{Int64: 1},
-			Role:      sql.NullString{String: "Tripulante"},
+			Role:      sql.NullString{String: "Funcionario"},
 			Hierarchy: sql.NullInt32{Int32: 1},
 		},
 		employeeModel.EmployeeRole{

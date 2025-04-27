@@ -487,7 +487,7 @@ func matchRole(employee employeeModel.EmployeeView) (int32, error) {
 
 	switch gpoFuncional {
 	case "outros":
-		res = employeeRoles.FindRoleByName("Tripulante")
+		res = employeeRoles.FindRoleByName("Funcionario")
 	case "presidente", "vice-presidente":
 		res = employeeRoles.FindRoleByName("Diretoria")
 	default:
