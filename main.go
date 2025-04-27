@@ -1,7 +1,7 @@
 package main
 
-import "github.com/brianmorais/go-user-importation/importation"
+import "github.com/brianmorais/go-user-importation/application"
 
 func main() {
-	importation.Run()
+	application.Run()
 }

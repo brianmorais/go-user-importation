@@ -1,4 +1,4 @@
-package importation
+package application
 
 import (
 	"errors"
@@ -6,10 +6,10 @@ import (
 	"log"
 	"time"
 
-	"github.com/golobby/container/v3"
 	"github.com/brianmorais/go-user-importation/configuration"
 	"github.com/brianmorais/go-user-importation/domain/interfaces"
 	"github.com/brianmorais/go-user-importation/ioc"
+	"github.com/golobby/container/v3"
 )
 
 var settings *configuration.Settings
